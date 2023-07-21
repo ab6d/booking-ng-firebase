@@ -1,0 +1,48 @@
+<p>admin-dashboard works!</p>
+<button (click)="authService.signOut()">Sign out</button>
+
+<div class="mat-elevation-z8">
+    <table [dataSource]="dataSource" mat-table>
+      <!-- Room Type Column -->
+      <ng-container matColumnDef="roomType">
+        <th mat-header-cell *matHeaderCellDef> Room Type </th>
+        <td mat-cell *matCellDef="let element"> {{ element.roomType }} </td>
+      </ng-container>
+  
+      <!-- Number of Rooms Column -->
+      <ng-container matColumnDef="noOfRooms">
+        <th mat-header-cell *matHeaderCellDef> Number of Rooms </th>
+        <td mat-cell *matCellDef="let element"> {{ element.noOfRooms }} </td>
+      </ng-container>
+  
+      <!-- Check-In Date Column -->
+      <ng-container matColumnDef="checkInDate">
+        <th mat-header-cell *matHeaderCellDef> Check-In Date </th>
+        <td mat-cell *matCellDef="let element"> {{ element.checkInDate | timestampToDate }} </td>
+      </ng-container>
+  
+      <!-- Check-Out Date Column -->
+      <ng-container matColumnDef="checkOutDate">
+        <th mat-header-cell *matHeaderCellDef> Check-Out Date </th>
+        <td mat-cell *matCellDef="let element"> {{ element.checkOutDate | timestampToDate }} </td>
+      </ng-container>
+  
+      <!-- Number of Adults Column -->
+      <ng-container matColumnDef="noOfAdults">
+        <th mat-header-cell *matHeaderCellDef> Number of Adults </th>
+        <td mat-cell *matCellDef="let element"> {{ element.noOfAdults }} </td>
+      </ng-container>
+  
+      <!-- Number of Children Column -->
+      <ng-container matColumnDef="noOfChildren">
+        <th mat-header-cell *matHeaderCellDef> Number of Children </th>
+        <td mat-cell *matCellDef="let element"> {{ element.noOfChildren }} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+  

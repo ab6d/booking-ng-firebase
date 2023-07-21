@@ -1,0 +1,69 @@
+<div class="page-container">
+  <header>
+    <div class="language-header">
+      <p>
+        <a [class.selected]="isEnglish" (click)="changeLanguage('en')">{{ 'english' | translate }}</a>
+        <span>|</span>
+        <a [class.selected]="isArabic" (click)="changeLanguage('ar')">{{ 'arabic' | translate }}</a>
+      </p>
+    </div>
+    <nav class="navbar">
+      <a class="menu-button" (click)="drawer.toggle()">MENU</a>
+      <h1>Site</h1>
+    </nav>
+  </header>
+
+  <mat-drawer-container [hasBackdrop]="true" (backdropClick)="drawer.close()">
+    <mat-drawer #drawer [mode]="'over'">
+      <ul>
+        <li [routerLink]="[slashLang]" routerLinkActive="active">
+          <a>{{ 'home' | translate }}</a>
+        </li>
+        <li [routerLink]="[slashLang, 'about-us']" routerLinkActive="active">
+          <a>{{ 'about-us' | translate }}</a>
+        </li>
+        <li [routerLink]="[slashLang, 'gallery']" routerLinkActive="active">
+          <a>{{ 'gallery' | translate }}</a>
+        </li>
+        <li [routerLink]="[slashLang, 'rooms']" routerLinkActive="active">
+          <a>{{ 'rooms' | translate }}</a>
+        </li>
+        <li [routerLink]="[slashLang, 'contact']" routerLinkActive="active">
+          <a>{{ 'contact' | translate }}</a>
+        </li>
+      </ul>
+    </mat-drawer>
+
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+
+      <footer>
+        <div class="footer-unit">
+          <img src="/assets/img/footer_logo.svg" class="img-fluid" style="width: 200px;">
+          <p style="color: #FFF;font-size: 16px;letter-spacing: 1px;text-indent: 14px;">{{ 'title' | translate }}</p>
+        </div>
+
+        <div class="footer-unit">
+          <h3>{{ 'menu' | translate }}</h3>
+          <ul class="footer_link">
+            <li><a [routerLink]="[slashLang, 'about-us']">{{ 'about-us' | translate }}</a></li>
+            <li><a [routerLink]="[slashLang, 'gallery']">{{ 'gallery' | translate }}</a></li>
+            <li><a [routerLink]="[slashLang, 'rooms']">{{ 'rooms' | translate }}</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-unit">
+          <h3>{{ 'service' | translate }}</h3>
+          <ul class="footer_link">
+            <li><a [routerLink]="[slashLang, 'privacy-policy']">{{ 'privacy-policy' | translate }}</a></li>
+            <li><a [routerLink]="[slashLang, 'refund-policy']">{{ 'refund-policy' | translate }}</a></li>
+            <li><a [routerLink]="[slashLang, 'terms-and-conditions']">{{ 'terms-and-conditions' | translate }}</a></li>
+            <li><a [routerLink]="[slashLang, 'contact']">{{ 'contact' | translate }}</a></li>
+          </ul>
+        </div>
+      </footer>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
+
+<app-back-to-top></app-back-to-top>

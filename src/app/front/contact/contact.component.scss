@@ -1,0 +1,57 @@
+.location_part {
+    background: #fff;
+    padding: 30px;
+    bottom: 20px;
+    box-shadow: 0 2px 7px rgb(0 0 0 / 15%);
+    p {
+        background: darkblue;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    span {
+        border-right: 1px solid #fff;
+        display: inline-block;
+        padding: 10px 12px;
+        margin-right: 10px;
+    }
+
+    h3 {
+        border-bottom: 1px dashed #ccc;
+        padding: 10px 0px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.75rem;
+    }
+
+    address {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 29px;
+        font-style: italic;
+    }
+
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+.location-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (min-width: 992px) {
+    .location-content {
+      flex-direction: row;
+    }
+
+    .iframe-googlemap {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+  }

@@ -1,0 +1,25 @@
+{
+    "about-us": "About us",
+    "english": "English",
+    "arabic": "Arabic",
+    "room-type": "Room Type",
+    "check-in": "Check In",
+    "check-out": "Check Out",
+    "adult": "Adult",
+    "children": "Children",
+    "book-now": "Book Now",
+    "welcome": {
+        "title": "Discover Azure Haven Residences",
+        "location": "Azure Haven Residences, Dubai, UAE",
+        "description": "Azure Haven Residences is a contemporary and fully equipped boutique accommodation, providing outstanding facilities to cater to guests on vacations, business trips, or any other purpose. Conveniently situated for easy exploration of Dubai and neighboring Emirates, the area boasts tranquility amidst a vibrant array of restaurants and services for all interests.",
+        "staff": "Our hospitable team lies at the heart of our commitment, ensuring each guest enjoys a memorable and delightful experience by customizing our services to meet every individual's desires and requirements.",
+        "footer": "This website is operated and maintained by Azure Haven Residences LLC"
+    },
+    "rooms": {
+        "title": "All our rooms include:",
+        "wifi": "Wifi",
+        "airConditioner": "Air Conditioner"
+    },
+    "roomsNb": "numberOfRooms",
+    "roomsRaw": "Rooms"
+}

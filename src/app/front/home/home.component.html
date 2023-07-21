@@ -1,0 +1,22 @@
+<app-booking-form></app-booking-form>
+
+<div class="content-page">
+
+    <h2 class="title-text">Stellara Oasis Retreat</h2>
+
+    <p class="subtitle-text">
+        Stellara Oasis Retreat is a secluded sanctuary nestled amidst the verdant heart of an enchanting forest, hidden away from the bustling world. Located in the mystical Sylverwood Valley, it's a serene escape just a whisper away from the mesmerizing Celestial Lake and the Celestial Peaks, where time seems to stand still. Magical creatures and ancient secrets await your discovery in this wondrous realm.
+    </p>
+    
+    <p class="subtitle-text" [hidden]="!showFullContent">
+        Stellara Oasis Retreat offers 36 ethereal Cottages & Enchanted Suites, each thoughtfully crafted to immerse you in nature's embrace. Complimentary Ethereal Net, Mystical Tea Enchantments, stargazing channels, and in-room Enchanted Chest for your treasures. Immerse yourself in the mystical waters of the Celestial Lagoon, unwind in the dreamy aura of the Moonlit Spa, or embark on guided quests with our Elemental Ambassadors.
+    </p>
+    
+    <p class="subtitle-text" [hidden]="!showFullContent">
+        For your protection, we safeguard your journey with potent ancient wards and mystical guardians that ensure your safety and tranquility during your stay.
+    </p>
+    
+    <button style="margin-bottom: 1rem;" mat-button color="primary" (click)="toggleContent()">
+        {{ showFullContent ? 'Read Less' : 'Read More' }}
+    </button>
+</div>

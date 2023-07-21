@@ -1,0 +1,30 @@
+.booking-form-container {
+    top: 64%;
+    right: 0px;
+    left: 0px;
+    text-align: center;
+    color: #373737;
+    width: 100%;
+    margin: 0 auto;
+    background: lightskyblue;
+    padding: 40px 40px 40px 30px;
+    /* box-shadow: 0 2px 7px rgb(0 0 0 / 15%); */
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    color: white !important;
+
+    form {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    mat-form-field {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+
+}

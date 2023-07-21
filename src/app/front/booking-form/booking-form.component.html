@@ -1,0 +1,45 @@
+<div class="booking-form-container">
+  <form [formGroup]="bookingForm" (ngSubmit)="handleSubmit()">
+    <mat-form-field>
+      <mat-label>{{ 'room-type' | translate }}</mat-label>
+      <mat-select formControlName="roomType">
+        <mat-option *ngFor="let room of db.rooms" [value]="room.id">{{ room.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>{{ 'roomsNb' | translate }}</mat-label>
+      <input type="number" matInput formControlName="noOfRooms" min="1">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>{{ 'check-in' | translate }}</mat-label>
+      <input matInput [matDatepicker]="checkInDatePicker" formControlName="checkInDate" placeholder="{{ 'check-in' | translate }}"
+          min="{{ minDateFormatted }}">
+      <mat-datepicker-toggle matSuffix [for]="checkInDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #checkInDatePicker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>{{ 'check-out' | translate }}</mat-label>
+      <input matInput [matDatepicker]="checkOutDatePicker" formControlName="checkOutDate" placeholder="{{ 'check-out' | translate }}"
+          min="{{ minDateFormatted }}">
+      <mat-datepicker-toggle matSuffix [for]="checkOutDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #checkOutDatePicker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>{{ 'adult' | translate }}</mat-label>
+      <input type="number" matInput formControlName="noOfAdults">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>{{ 'children' | translate }}</mat-label>
+      <input type="number" matInput formControlName="noOfChildren">
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="primary">{{ 'book-now' | translate }}</button>
+
+    <div *ngIf="submitted">SUBMITTED</div>
+  </form>
+</div>

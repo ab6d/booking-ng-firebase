@@ -1,0 +1,122 @@
+header {
+    display: flex;
+    flex-direction: column;
+
+    background-color: lightblue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+    .language-header {
+        background: #F2F2F2;
+        padding: 10px 30px;
+        font-size: 14px;
+        font-weight: 500;
+        span {
+            padding: 0px 8px;
+        }
+        a {
+            color: rgb(204, 204, 204);
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+        .selected {
+            color: #373736 !important;
+        }
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 0px 10px;
+        box-shadow: 0 2px 7px rgb(0 0 0 / 15%);
+        background: #fff;
+        transition: padding-top .3s ease-in-out, height .3s ease-in-out;
+
+        .navbar-left {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+
+        .menu-button {
+            padding-right: 20px;
+            color: #525252;
+            border-right: 1px solid #C7C5C5;
+            display: inline-flex;
+            height: 100px;
+            align-items: center;
+            transition: height 300ms cubic-bezier(0.86, 0, 0.07, 1), transform 300ms cubic-bezier(0.86, 0, 0.07, 1), padding-top 300ms cubic-bezier(0.86, 0, 0.07, 1);
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+
+}
+
+footer {
+    background: darkblue;
+    padding: 30px 0px;
+    color: white;
+    display: flex;
+    flex: flex-wrap;
+
+    @media (min-width: 800px) {
+        flex-direction: row;
+    }
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+
+    ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .footer-unit {
+        padding: 10px 25px;
+    }
+
+    h3 {
+        font-size: 24px;
+        color: #fff;
+        margin: 40px 0px 20px;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 600;
+    }
+
+    li {
+        list-style-type: none;
+        padding: 5px 0;
+    }
+    a {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: none;
+        background-color: transparent;
+    }
+}
+
+.page-container {
+    min-height: 100dvh;
+}
+
+mat-drawer-content {
+    height: 100%;
+}
+
+mat-drawer {
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        padding: 20px 15px;
+        cursor: pointer;
+    }
+}
